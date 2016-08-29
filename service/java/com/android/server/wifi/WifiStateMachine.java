@@ -5289,6 +5289,7 @@ public class WifiStateMachine extends StateMachine implements WifiNative.WifiRss
                                         WifiConfiguration.INVALID_NETWORK_ID);
 
                         mOperationalMode = CONNECT_MODE;
+                        setNetworkDetailedState(DetailedState.DISCONNECTED);
                         transitionTo(mDisconnectedState);
                     } else {
                         // Nothing to do
